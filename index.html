@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        .card{
+            width: 250px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgb(171, 171,171);
+            text-align: center;
+            padding: 10px;
+        }
+
+        .card img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        h2{
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        p{
+            color: #555;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="card-container">
+        <!--Place code inside in javascript-->
+    </div>
+
+    <script>
+        //Step Uno
+        const container = document.getElementById('card-container');
+
+        //Step Dos
+        let card = document.createElement('div');
+        card.className = 'card';
+
+        //Step Tres
+        let image = document.createElement('img');
+        image.src = 'avatar.svg';
+        image.alt = 'Profile Picture';
+
+        //Step Quarto
+        let name = document.createElement('h2');
+        name.textContent = "John Doe";
+
+        //Step Cinco
+        let job = document.createElement('p');
+        job.textContent = 'Web Developer';
+
+        //Step Sies
+        let locationText = document.createElement('p');
+        locationText.textContent = "Phoenix, Arizona";
+
+        //Step Siete
+        card.appendChild(image);
+        card.appendChild(name);
+        card.appendChild(job);
+        card.appendChild(locationText);
+
+        //Step Ocho
+        container.appendChild(card);
+
+    </script>
+</body>
+</html>
